@@ -29,14 +29,14 @@ exports.sendFeedbackEmail = async (name, email, feedbackType, message) => {
         throw new Error('Failed to send feedback email');
     }
 };
-    
+
 // Function to submit contact form
 exports.submitContact = async (name, email, message) => {
     try {
         // Send contact email
         await transporter.sendMail({
             from: 'birlapranjal420@gmail.com', // Sender email address
-            to: ['birlapranjal460@gmail.com','pranjalbcse2283@svvv.edu.in'] ,// Recipient email address
+            to: ['birlapranjal460@gmail.com','abhyudaya@svvv.edu.in'] ,// Recipient email address
             subject: 'Contact Form Submission',
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         });
