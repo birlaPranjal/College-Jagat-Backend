@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 // Create transporter instance
 const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST, // Gmail SMTP server
-    port: process.env.EMAIL_PORT, // Port for TLS/STARTTLS
+    port: process.env.EMAIL_PORT , // Port for TLS/STARTTLS
     secure: false, // Set to true for SSL, false for TLS/STARTTLS
     auth: {
         user: process.env.EMAIL_USER, // Your Gmail email address
@@ -17,7 +17,9 @@ exports.sendFeedbackEmail = async (name, email, feedbackType, message) => {
         from: 'birlapranjal420@gmail.com', // Sender email address
         to: ['birlapranjal460@gmail.com', 'pranjalbcse2283@svvv.edu.in'], // Recipient email address
         subject: 'Feedback Form Submission',
-        text: `Name: ${name}\nEmail: ${email}\nFeedback Type: ${feedbackType}\nMessage: ${message}`,
+        text: `Thankyou for contacting us!!\n\n
+         
+        Name: ${name}\nEmail: ${email}\nFeedback Type: ${feedbackType}\nMessage: ${message}`,
     };
 
     try {
